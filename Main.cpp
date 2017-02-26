@@ -14,9 +14,8 @@
 using namespace std;
 
 int main() {
-    string command;
-	//settings for the first problem
-	double FV = 1000.0;
+    
+    double FV = 1000.0;
     double coupon = 0;
     double price = 0;
     int Num_coupon = 0;
@@ -27,14 +26,12 @@ int main() {
     double ytm = 0.0;
     
     
-    
-		//First task: Extract YTM
-            read_num(price, coupon, year_start, year_end, compound);
-            Num_coupon = (year_end - year_start) * compound;
-            // using bisection method to calculate the YTM
-            bisec(price, FV, coupon, tolerance, compound, Num_coupon, ytm);
-            ytm *= 100.0;
-            cout << "Using bisection method, YTM = " << ytm << "%" << endl;
+        read_num(price, coupon, year_start, year_end, compound);
+	Num_coupon = (year_end - year_start) * compound;
+     // using bisection method to calculate the YTM
+        bisec(price, FV, coupon, tolerance, compound, Num_coupon, ytm);
+        ytm *= 100.0;
+        cout << "Using bisection method, YTM = " << ytm << "%" << endl;
      
         
  
